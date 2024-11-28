@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raspberry Pi GPIO Control</title>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+<h1>GPIO Control</h1>
+<button id="onButton" onclick="turnOn()">Turn On</button>
+<button id="offButton" onclick="turnOff()">Turn Off</button>
+<script>
+function turnOn() {
+    $.get("/turn_on");
+}
+function turnOff() {
+    $.get("/turn_off");
+}
+</script>
+</body>
+</html>
